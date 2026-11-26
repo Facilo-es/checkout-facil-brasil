@@ -1,10 +1,10 @@
-=== Checkout Fácil Brasil for WooCommerce ===
+=== Facilo Checkout Fácil Brasil ===
 Contributors: facilo
 Tags: cpf, cnpj, brasil, checkout, woocommerce
 Requires at least: 6.6
 Tested up to: 7.2
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ Sell to Brazil without losing orders at the last step. Checkout Fácil Brasil ad
 = What your shop gets =
 
 * **Fewer abandoned checkouts.** Shoppers choose Pessoa Física or Pessoa Jurídica and only see the fields they need. Masks and clear messages help them type a valid CPF or CNPJ the first time.
-* **Brazilian fields on any checkout ("campos brasileiros checkout").** Works on the Checkout block (WooCommerce 8.9 and later) and on the classic shortcode checkout, with the same data on both.
+* **Brazilian fields on any checkout.** Works on the Checkout block (WooCommerce 8.9 and later) and on the classic shortcode checkout, with the same data on both.
 * **Addresses your carrier can deliver to.** "Número e bairro" for billing and shipping, with a "Sem número" box, hidden for other countries.
 * **Companies can buy, including new ones.** The CNPJ check accepts the alphanumeric format (letters in the first 12 positions) as well as the classic numeric one. Razão social is required for companies.
 * **Payment and NF-e plugins keep working.** Data is saved under the same order and customer keys the old plugin used (`_billing_cpf`, `_billing_cnpj`, `_billing_number`, `_billing_neighborhood` and the rest), on block and classic orders, with HPOS on or off.
@@ -38,7 +38,7 @@ Questions are answered in this plugin's support forum on wordpress.org. Each ver
 
 == Installation ==
 
-1. In WordPress, go to Plugins > Add New, search for "Checkout Fácil Brasil" and click Install, then Activate.
+1. In WordPress, go to Plugins > Add New, search for "Facilo Checkout Fácil Brasil" and click Install, then Activate.
 2. Open WooCommerce > Checkout Fácil Brasil and follow the three steps: who buys from you, which fields to show, and done.
 3. Place a test order on your checkout to see the fields.
 
@@ -48,7 +48,7 @@ If Brazilian Market on WooCommerce is active, its settings are imported and a no
 
 = Does it work with the Checkout block? =
 
-Yes. On the block checkout ("checkout em blocos CPF") the fields are added through WooCommerce's own Additional Checkout Fields API, from WooCommerce 8.9. On WooCommerce 9.9 and later only the CPF or the CNPJ shows, depending on the person type. On older versions both show and only the right one is required. The classic checkout works too.
+Yes. On the block checkout the fields are added through WooCommerce's own Additional Checkout Fields API, from WooCommerce 8.9. On WooCommerce 9.9 and later only the CPF or the CNPJ shows, depending on the person type. On older versions both show and only the right one is required. The classic checkout works too.
 
 = I'm moving from Brazilian Market on WooCommerce. Do I lose data? =
 
@@ -85,10 +85,16 @@ No. Checks run in your shop, and no data leaves it.
 
 == Changelog ==
 
+= 1.0.1 =
+* New name, Facilo Checkout Fácil Brasil, and folder facilo-checkout-facil-brasil. If the earlier copy (folder checkout-facil-brasil) is still installed, only one of them runs; you can delete the earlier one, and your settings and orders stay.
+
 = 1.0.0 =
 * First release: CPF, CNPJ (numeric and alphanumeric), Razão social, Número, Bairro, Celular, RG, Inscrição Estadual, Data de nascimento and Gênero on the block and classic checkouts, import from Brazilian Market on WooCommerce, LGPD export and erase.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+New name and folder. After installing, delete the earlier copy if you still have it.
 
 = 1.0.0 =
 First release.

@@ -315,13 +315,13 @@ class CFBR_Fields_Classic {
 	}
 
 	/**
-	 * Posted data, read once per request.
+	 * Posted data, sanitized as it is read.
 	 *
 	 * @return array
 	 */
 	private static function posted() {
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WooCommerce checks the checkout nonce before this runs.
-		return wp_unslash( $_POST );
+		return map_deep( wp_unslash( $_POST ), 'sanitize_text_field' );
 	}
 
 	/**

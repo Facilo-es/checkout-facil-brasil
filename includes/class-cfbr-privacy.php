@@ -58,10 +58,10 @@ class CFBR_Privacy {
 		if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
 			return;
 		}
-		$text  = '<p class="privacy-policy-tutorial">' . esc_html__( 'Suggested text for stores that use Checkout Fácil Brasil. Adjust it to the fields you ask for.', 'checkout-facil-brasil' ) . '</p>';
-		$text .= '<p><strong class="privacy-policy-tutorial">' . esc_html__( 'Suggested text:', 'checkout-facil-brasil' ) . '</strong> ';
-		$text .= esc_html__( 'At checkout we ask for your CPF or CNPJ and, depending on the store’s settings, your RG, state registration, date of birth, gender and mobile number, as well as the number and neighbourhood of your address. We use this data to issue the invoice for your purchase, to deliver your order and to contact you about it. We keep it with your order for as long as the tax law requires. This data is stored only in our store and is not sent to other services by this plugin.', 'checkout-facil-brasil' ) . '</p>';
-		wp_add_privacy_policy_content( __( 'Checkout Fácil Brasil', 'checkout-facil-brasil' ), wp_kses_post( $text ) );
+		$text  = '<p class="privacy-policy-tutorial">' . esc_html__( 'Suggested text for stores that use Checkout Fácil Brasil. Adjust it to the fields you ask for.', 'facilo-checkout-facil-brasil' ) . '</p>';
+		$text .= '<p><strong class="privacy-policy-tutorial">' . esc_html__( 'Suggested text:', 'facilo-checkout-facil-brasil' ) . '</strong> ';
+		$text .= esc_html__( 'At checkout we ask for your CPF or CNPJ and, depending on the store’s settings, your RG, state registration, date of birth, gender and mobile number, as well as the number and neighbourhood of your address. We use this data to issue the invoice for your purchase, to deliver your order and to contact you about it. We keep it with your order for as long as the tax law requires. This data is stored only in our store and is not sent to other services by this plugin.', 'facilo-checkout-facil-brasil' ) . '</p>';
+		wp_add_privacy_policy_content( __( 'Checkout Fácil Brasil', 'facilo-checkout-facil-brasil' ), wp_kses_post( $text ) );
 	}
 
 	/**
@@ -72,7 +72,7 @@ class CFBR_Privacy {
 	 */
 	public static function register_exporter( $exporters ) {
 		$exporters['checkout-facil-brasil'] = array(
-			'exporter_friendly_name' => __( 'Checkout Fácil Brasil: customer data', 'checkout-facil-brasil' ),
+			'exporter_friendly_name' => __( 'Checkout Fácil Brasil: customer data', 'facilo-checkout-facil-brasil' ),
 			'callback'               => array( __CLASS__, 'export_customer' ),
 		);
 		return $exporters;
@@ -86,7 +86,7 @@ class CFBR_Privacy {
 	 */
 	public static function register_eraser( $erasers ) {
 		$erasers['checkout-facil-brasil'] = array(
-			'eraser_friendly_name' => __( 'Checkout Fácil Brasil: customer data', 'checkout-facil-brasil' ),
+			'eraser_friendly_name' => __( 'Checkout Fácil Brasil: customer data', 'facilo-checkout-facil-brasil' ),
 			'callback'             => array( __CLASS__, 'erase_customer' ),
 		);
 		return $erasers;
@@ -104,7 +104,7 @@ class CFBR_Privacy {
 		$name = isset( $defs[ $id ]['label'] ) ? $defs[ $id ]['label'] : $id;
 		if ( 0 === strpos( $key, 'shipping_' ) || 0 === strpos( $key, '_wc_shipping/' ) ) {
 			/* translators: %s: field name. */
-			$name = sprintf( __( '%s (shipping)', 'checkout-facil-brasil' ), $name );
+			$name = sprintf( __( '%s (shipping)', 'facilo-checkout-facil-brasil' ), $name );
 		}
 		return $name;
 	}
@@ -137,7 +137,7 @@ class CFBR_Privacy {
 		if ( $data ) {
 			$items[] = array(
 				'group_id'    => 'checkout-facil-brasil',
-				'group_label' => __( 'Brazilian checkout fields', 'checkout-facil-brasil' ),
+				'group_label' => __( 'Brazilian checkout fields', 'facilo-checkout-facil-brasil' ),
 				'item_id'     => 'user-' . $user->ID,
 				'data'        => $data,
 			);

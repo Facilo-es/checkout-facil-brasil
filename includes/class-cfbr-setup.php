@@ -48,8 +48,8 @@ class CFBR_Setup {
 	public static function menu() {
 		add_submenu_page(
 			'woocommerce',
-			__( 'Checkout Fácil Brasil', 'checkout-facil-brasil' ),
-			__( 'Checkout Fácil Brasil', 'checkout-facil-brasil' ),
+			__( 'Checkout Fácil Brasil', 'facilo-checkout-facil-brasil' ),
+			__( 'Checkout Fácil Brasil', 'facilo-checkout-facil-brasil' ),
 			'manage_woocommerce',
 			self::SLUG,
 			array( __CLASS__, 'render' )
@@ -63,7 +63,7 @@ class CFBR_Setup {
 	 * @return array
 	 */
 	public static function action_links( $links ) {
-		array_unshift( $links, '<a href="' . esc_url( self::url() ) . '">' . esc_html__( 'Settings', 'checkout-facil-brasil' ) . '</a>' );
+		array_unshift( $links, '<a href="' . esc_url( self::url() ) . '">' . esc_html__( 'Settings', 'facilo-checkout-facil-brasil' ) . '</a>' );
 		return $links;
 	}
 
@@ -98,15 +98,15 @@ class CFBR_Setup {
 	public static function tabs() {
 		$tabs = array(
 			'fields'   => array(
-				'label'  => __( 'Fields', 'checkout-facil-brasil' ),
+				'label'  => __( 'Fields', 'facilo-checkout-facil-brasil' ),
 				'render' => array( __CLASS__, 'tab_fields' ),
 			),
 			'behavior' => array(
-				'label'  => __( 'Behaviour', 'checkout-facil-brasil' ),
+				'label'  => __( 'Behaviour', 'facilo-checkout-facil-brasil' ),
 				'render' => array( __CLASS__, 'tab_behavior' ),
 			),
 			'pro'      => array(
-				'label'  => __( 'Pro', 'checkout-facil-brasil' ),
+				'label'  => __( 'Pro', 'facilo-checkout-facil-brasil' ),
 				'render' => array( __CLASS__, 'tab_pro' ),
 			),
 		);
@@ -125,7 +125,7 @@ class CFBR_Setup {
 	 */
 	public static function render() {
 		if ( ! current_user_can( 'manage_woocommerce' ) ) {
-			wp_die( esc_html__( 'You are not allowed to change these settings.', 'checkout-facil-brasil' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to change these settings.', 'facilo-checkout-facil-brasil' ), '', array( 'response' => 403 ) );
 		}
 		// phpcs:disable WordPress.Security.NonceVerification.Recommended -- Navigation only.
 		$step = isset( $_GET['step'] ) ? absint( $_GET['step'] ) : 0;
@@ -140,14 +140,14 @@ class CFBR_Setup {
 			$tab = 'fields';
 		}
 		echo '<div class="wrap cfbr-wrap">';
-		echo '<h1 class="cfbr-title">' . self::mark() . esc_html__( 'Checkout Fácil Brasil', 'checkout-facil-brasil' ) . '</h1>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static SVG.
+		echo '<h1 class="cfbr-title">' . self::mark() . esc_html__( 'Checkout Fácil Brasil', 'facilo-checkout-facil-brasil' ) . '</h1>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static SVG.
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Display flag only.
 		if ( isset( $_GET['updated'] ) ) {
-			echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'Settings saved.', 'checkout-facil-brasil' ) . '</p></div>';
+			echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'Settings saved.', 'facilo-checkout-facil-brasil' ) . '</p></div>';
 		}
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Display flag only.
 		if ( isset( $_GET['cfbr-legacy-off'] ) ) {
-			echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'The old plugin is off. Your Brazilian fields now come from Checkout Fácil Brasil.', 'checkout-facil-brasil' ) . '</p></div>';
+			echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'The old plugin is off. Your Brazilian fields now come from Checkout Fácil Brasil.', 'facilo-checkout-facil-brasil' ) . '</p></div>';
 		}
 		echo '<nav class="nav-tab-wrapper cfbr-tabs">';
 		foreach ( $tabs as $slug => $info ) {
@@ -158,7 +158,7 @@ class CFBR_Setup {
 				esc_html( isset( $info['label'] ) ? $info['label'] : $slug )
 			);
 		}
-		printf( '<a href="%s" class="cfbr-rerun">%s</a>', esc_url( self::url( array( 'step' => 1 ) ) ), esc_html__( 'Run the setup again', 'checkout-facil-brasil' ) );
+		printf( '<a href="%s" class="cfbr-rerun">%s</a>', esc_url( self::url( array( 'step' => 1 ) ) ), esc_html__( 'Run the setup again', 'facilo-checkout-facil-brasil' ) );
 		echo '</nav><div class="cfbr-tab-body">';
 		if ( isset( $tabs[ $tab ]['render'] ) && is_callable( $tabs[ $tab ]['render'] ) ) {
 			call_user_func( $tabs[ $tab ]['render'] );
@@ -182,10 +182,10 @@ class CFBR_Setup {
 	 */
 	private static function mode_labels() {
 		return array(
-			'off'           => __( 'Off', 'checkout-facil-brasil' ),
-			'optional'      => __( 'Optional', 'checkout-facil-brasil' ),
-			'required'      => __( 'Required', 'checkout-facil-brasil' ),
-			'replace_phone' => __( 'Required, instead of Phone', 'checkout-facil-brasil' ),
+			'off'           => __( 'Off', 'facilo-checkout-facil-brasil' ),
+			'optional'      => __( 'Optional', 'facilo-checkout-facil-brasil' ),
+			'required'      => __( 'Required', 'facilo-checkout-facil-brasil' ),
+			'replace_phone' => __( 'Required, instead of Phone', 'facilo-checkout-facil-brasil' ),
 		);
 	}
 
@@ -196,10 +196,10 @@ class CFBR_Setup {
 	 */
 	private static function person_labels() {
 		return array(
-			'both' => __( 'Individuals and businesses', 'checkout-facil-brasil' ),
-			'pf'   => __( 'Individuals only (CPF)', 'checkout-facil-brasil' ),
-			'pj'   => __( 'Businesses only (CNPJ)', 'checkout-facil-brasil' ),
-			'none' => __( 'Do not ask for a document', 'checkout-facil-brasil' ),
+			'both' => __( 'Individuals and businesses', 'facilo-checkout-facil-brasil' ),
+			'pf'   => __( 'Individuals only (CPF)', 'facilo-checkout-facil-brasil' ),
+			'pj'   => __( 'Businesses only (CNPJ)', 'facilo-checkout-facil-brasil' ),
+			'none' => __( 'Do not ask for a document', 'facilo-checkout-facil-brasil' ),
 		);
 	}
 
@@ -268,18 +268,18 @@ class CFBR_Setup {
 		$three = array_intersect_key( $modes, array_flip( array( 'off', 'optional', 'required' ) ) );
 		$defs  = CFBR_Fields::definitions();
 		self::form_open( 'fields' );
-		echo '<h2>' . esc_html__( 'Which fields the checkout asks for', 'checkout-facil-brasil' ) . '</h2>';
+		echo '<h2>' . esc_html__( 'Which fields the checkout asks for', 'facilo-checkout-facil-brasil' ) . '</h2>';
 		echo '<table class="form-table" role="presentation">';
-		self::select( 'person_type', __( 'Who buys in your shop?', 'checkout-facil-brasil' ), self::person_labels() );
-		self::toggle( 'company_required', __( 'Company legal name', 'checkout-facil-brasil' ), __( 'Required for businesses. It uses WooCommerce’s own Company field.', 'checkout-facil-brasil' ) );
-		self::select( 'cellphone', $defs['cellphone']['label'], $modes, __( 'Mask (00) 00000-0000. Also accepts landlines.', 'checkout-facil-brasil' ) );
-		self::select( 'rg', $defs['rg']['label'], $three, __( 'Shown for individuals.', 'checkout-facil-brasil' ) );
-		self::select( 'ie', $defs['ie']['label'], $three, __( 'Shown for businesses, with an Exempt option.', 'checkout-facil-brasil' ) );
+		self::select( 'person_type', __( 'Who buys in your shop?', 'facilo-checkout-facil-brasil' ), self::person_labels() );
+		self::toggle( 'company_required', __( 'Company legal name', 'facilo-checkout-facil-brasil' ), __( 'Required for businesses. It uses WooCommerce’s own Company field.', 'facilo-checkout-facil-brasil' ) );
+		self::select( 'cellphone', $defs['cellphone']['label'], $modes, __( 'Mask (00) 00000-0000. Also accepts landlines.', 'facilo-checkout-facil-brasil' ) );
+		self::select( 'rg', $defs['rg']['label'], $three, __( 'Shown for individuals.', 'facilo-checkout-facil-brasil' ) );
+		self::select( 'ie', $defs['ie']['label'], $three, __( 'Shown for businesses, with an Exempt option.', 'facilo-checkout-facil-brasil' ) );
 		self::select( 'birthdate', $defs['birthdate']['label'], $three );
-		self::select( 'gender', $defs['gender']['label'], $three, __( 'Always includes “Prefer not to say”.', 'checkout-facil-brasil' ) );
-		self::toggle( 'neighborhood_required', __( 'Neighbourhood is required', 'checkout-facil-brasil' ) );
+		self::select( 'gender', $defs['gender']['label'], $three, __( 'Always includes “Prefer not to say”.', 'facilo-checkout-facil-brasil' ) );
+		self::toggle( 'neighborhood_required', __( 'Neighbourhood is required', 'facilo-checkout-facil-brasil' ) );
 		echo '</table>';
-		submit_button( __( 'Save changes', 'checkout-facil-brasil' ) );
+		submit_button( __( 'Save changes', 'facilo-checkout-facil-brasil' ) );
 		echo '</form>';
 	}
 
@@ -290,13 +290,13 @@ class CFBR_Setup {
 	 */
 	public static function tab_behavior() {
 		self::form_open( 'behavior' );
-		echo '<h2>' . esc_html__( 'How the fields behave', 'checkout-facil-brasil' ) . '</h2>';
+		echo '<h2>' . esc_html__( 'How the fields behave', 'facilo-checkout-facil-brasil' ) . '</h2>';
 		echo '<table class="form-table" role="presentation">';
-		self::toggle( 'masks', __( 'Format while typing', 'checkout-facil-brasil' ), __( 'Adds the dots, slashes and dashes to CPF, CNPJ, CEP and phone numbers as the customer types.', 'checkout-facil-brasil' ) );
-		self::toggle( 'only_brazil', __( 'Only for addresses in Brazil', 'checkout-facil-brasil' ), __( 'Customers abroad do not see the CPF and CNPJ fields.', 'checkout-facil-brasil' ) );
-		self::toggle( 'no_number', __( 'Show “No number”', 'checkout-facil-brasil' ), __( 'A box next to Number that stores S/N.', 'checkout-facil-brasil' ) );
+		self::toggle( 'masks', __( 'Format while typing', 'facilo-checkout-facil-brasil' ), __( 'Adds the dots, slashes and dashes to CPF, CNPJ, CEP and phone numbers as the customer types.', 'facilo-checkout-facil-brasil' ) );
+		self::toggle( 'only_brazil', __( 'Only for addresses in Brazil', 'facilo-checkout-facil-brasil' ), __( 'Customers abroad do not see the CPF and CNPJ fields.', 'facilo-checkout-facil-brasil' ) );
+		self::toggle( 'no_number', __( 'Show “No number”', 'facilo-checkout-facil-brasil' ), __( 'A box next to Number that stores S/N.', 'facilo-checkout-facil-brasil' ) );
 		echo '</table>';
-		submit_button( __( 'Save changes', 'checkout-facil-brasil' ) );
+		submit_button( __( 'Save changes', 'facilo-checkout-facil-brasil' ) );
 		echo '</form>';
 	}
 
@@ -317,34 +317,34 @@ class CFBR_Setup {
 			return;
 		}
 		$points = array(
-			__( 'Address filled from the CEP: the customer types 8 digits and the rest appears on its own.', 'checkout-facil-brasil' ),
-			__( 'Company details from the CNPJ, with a warning when the company is not active at the Receita.', 'checkout-facil-brasil' ),
-			__( 'State registration checked for each state.', 'checkout-facil-brasil' ),
-			__( 'Sign up and log in with CPF or CNPJ.', 'checkout-facil-brasil' ),
-			__( 'Order search by CPF/CNPJ and documents on PDF invoices.', 'checkout-facil-brasil' ),
-			__( 'CSV report for your accountant.', 'checkout-facil-brasil' ),
+			__( 'Address filled from the CEP: the customer types 8 digits and the rest appears on its own.', 'facilo-checkout-facil-brasil' ),
+			__( 'Company details from the CNPJ, with a warning when the company is not active at the Receita.', 'facilo-checkout-facil-brasil' ),
+			__( 'State registration checked for each state.', 'facilo-checkout-facil-brasil' ),
+			__( 'Sign up and log in with CPF or CNPJ.', 'facilo-checkout-facil-brasil' ),
+			__( 'Order search by CPF/CNPJ and documents on PDF invoices.', 'facilo-checkout-facil-brasil' ),
+			__( 'CSV report for your accountant.', 'facilo-checkout-facil-brasil' ),
 		);
 		?>
 		<div class="cfbr-pro">
 			<div class="cfbr-pro-copy">
-				<h2><?php esc_html_e( 'Less typing at checkout, fewer abandoned carts', 'checkout-facil-brasil' ); ?></h2>
+				<h2><?php esc_html_e( 'Less typing at checkout, fewer abandoned carts', 'facilo-checkout-facil-brasil' ); ?></h2>
 				<ul class="cfbr-pro-list">
 					<?php foreach ( $points as $point ) : ?>
 						<li><?php echo esc_html( $point ); ?></li>
 					<?php endforeach; ?>
 				</ul>
-				<p class="cfbr-pro-price"><?php esc_html_e( 'US$ 19 per year for one shop · US$ 59 per year for unlimited shops', 'checkout-facil-brasil' ); ?></p>
-				<p><a class="button button-primary button-hero cfbr-pro-button" href="<?php echo esc_url( CFBR_PRO_URL ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Discover Pro', 'checkout-facil-brasil' ); ?></a></p>
-				<p class="cfbr-pro-note"><?php esc_html_e( 'Secure payment through Freemius, in US dollars. Refund on request within 14 days.', 'checkout-facil-brasil' ); ?></p>
+				<p class="cfbr-pro-price"><?php esc_html_e( 'US$ 19 per year for one shop · US$ 59 per year for unlimited shops', 'facilo-checkout-facil-brasil' ); ?></p>
+				<p><a class="button button-primary button-hero cfbr-pro-button" href="<?php echo esc_url( CFBR_PRO_URL ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Discover Pro', 'facilo-checkout-facil-brasil' ); ?></a></p>
+				<p class="cfbr-pro-note"><?php esc_html_e( 'Secure payment through Freemius, in US dollars. Refund on request within 14 days.', 'facilo-checkout-facil-brasil' ); ?></p>
 			</div>
 			<div class="cfbr-demo" aria-hidden="true">
-				<div class="cfbr-demo-field cfbr-demo-cep"><span class="cfbr-demo-label"><?php esc_html_e( 'CEP', 'checkout-facil-brasil' ); ?></span><span class="cfbr-demo-type">01001-000</span></div>
-				<div class="cfbr-demo-field cfbr-demo-fill"><span class="cfbr-demo-label"><?php esc_html_e( 'Address', 'checkout-facil-brasil' ); ?></span><span>Praça da Sé</span></div>
+				<div class="cfbr-demo-field cfbr-demo-cep"><span class="cfbr-demo-label"><?php esc_html_e( 'CEP', 'facilo-checkout-facil-brasil' ); ?></span><span class="cfbr-demo-type">01001-000</span></div>
+				<div class="cfbr-demo-field cfbr-demo-fill"><span class="cfbr-demo-label"><?php esc_html_e( 'Address', 'facilo-checkout-facil-brasil' ); ?></span><span>Praça da Sé</span></div>
 				<div class="cfbr-demo-row">
-					<div class="cfbr-demo-field cfbr-demo-fill"><span class="cfbr-demo-label"><?php esc_html_e( 'Neighbourhood', 'checkout-facil-brasil' ); ?></span><span>Sé</span></div>
-					<div class="cfbr-demo-field cfbr-demo-fill"><span class="cfbr-demo-label"><?php esc_html_e( 'City', 'checkout-facil-brasil' ); ?></span><span>São Paulo · SP</span></div>
+					<div class="cfbr-demo-field cfbr-demo-fill"><span class="cfbr-demo-label"><?php esc_html_e( 'Neighbourhood', 'facilo-checkout-facil-brasil' ); ?></span><span>Sé</span></div>
+					<div class="cfbr-demo-field cfbr-demo-fill"><span class="cfbr-demo-label"><?php esc_html_e( 'City', 'facilo-checkout-facil-brasil' ); ?></span><span>São Paulo · SP</span></div>
 				</div>
-				<div class="cfbr-demo-field cfbr-demo-focus"><span class="cfbr-demo-label"><?php esc_html_e( 'Number', 'checkout-facil-brasil' ); ?></span><span class="cfbr-demo-caret"></span></div>
+				<div class="cfbr-demo-field cfbr-demo-focus"><span class="cfbr-demo-label"><?php esc_html_e( 'Number', 'facilo-checkout-facil-brasil' ); ?></span><span class="cfbr-demo-caret"></span></div>
 			</div>
 		</div>
 		<?php
@@ -388,7 +388,7 @@ class CFBR_Setup {
 	 */
 	public static function save_settings() {
 		if ( ! current_user_can( 'manage_woocommerce' ) ) {
-			wp_die( esc_html__( 'You are not allowed to change these settings.', 'checkout-facil-brasil' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to change these settings.', 'facilo-checkout-facil-brasil' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( self::SAVE );
 		$input = isset( $_POST['cfbr'] ) && is_array( $_POST['cfbr'] ) ? map_deep( wp_unslash( $_POST['cfbr'] ), 'sanitize_text_field' ) : array();
@@ -416,7 +416,7 @@ class CFBR_Setup {
 	 */
 	public static function save_setup() {
 		if ( ! current_user_can( 'manage_woocommerce' ) ) {
-			wp_die( esc_html__( 'You are not allowed to change these settings.', 'checkout-facil-brasil' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to change these settings.', 'facilo-checkout-facil-brasil' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( self::SETUP );
 		$input  = isset( $_POST['cfbr'] ) && is_array( $_POST['cfbr'] ) ? map_deep( wp_unslash( $_POST['cfbr'] ), 'sanitize_text_field' ) : array();
@@ -445,19 +445,19 @@ class CFBR_Setup {
 		$s      = CFBR_Settings::get();
 		$defs   = CFBR_Fields::definitions();
 		$cards  = array(
-			'both' => array( __( 'Individuals and businesses', 'checkout-facil-brasil' ), __( 'CPF or CNPJ, the customer chooses', 'checkout-facil-brasil' ), '<circle cx="9" cy="8" r="3.2"/><path d="M3 20c.8-3.4 3.2-5 6-5s5.2 1.6 6 5"/><path d="M15 20V8l6-1.5V20"/>' ),
-			'pf'   => array( __( 'Individuals only (CPF)', 'checkout-facil-brasil' ), __( 'Shops that sell to consumers', 'checkout-facil-brasil' ), '<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/>' ),
-			'pj'   => array( __( 'Businesses only (CNPJ)', 'checkout-facil-brasil' ), __( 'Wholesale and B2B sales', 'checkout-facil-brasil' ), '<path d="M4 21V5l8-2v18M12 9h8v12M7 8h2M7 12h2M7 16h2M15 13h2M15 17h2"/>' ),
-			'none' => array( __( 'Do not ask for a document', 'checkout-facil-brasil' ), __( 'Only number and neighbourhood in the address', 'checkout-facil-brasil' ), '<path d="M5 12h14"/>' ),
+			'both' => array( __( 'Individuals and businesses', 'facilo-checkout-facil-brasil' ), __( 'CPF or CNPJ, the customer chooses', 'facilo-checkout-facil-brasil' ), '<circle cx="9" cy="8" r="3.2"/><path d="M3 20c.8-3.4 3.2-5 6-5s5.2 1.6 6 5"/><path d="M15 20V8l6-1.5V20"/>' ),
+			'pf'   => array( __( 'Individuals only (CPF)', 'facilo-checkout-facil-brasil' ), __( 'Shops that sell to consumers', 'facilo-checkout-facil-brasil' ), '<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/>' ),
+			'pj'   => array( __( 'Businesses only (CNPJ)', 'facilo-checkout-facil-brasil' ), __( 'Wholesale and B2B sales', 'facilo-checkout-facil-brasil' ), '<path d="M4 21V5l8-2v18M12 9h8v12M7 8h2M7 12h2M7 16h2M15 13h2M15 17h2"/>' ),
+			'none' => array( __( 'Do not ask for a document', 'facilo-checkout-facil-brasil' ), __( 'Only number and neighbourhood in the address', 'facilo-checkout-facil-brasil' ), '<path d="M5 12h14"/>' ),
 		);
 		$extras = array(
-			'cellphone' => array( $defs['cellphone']['label'], __( 'Mask (00) 00000-0000. Also accepts landlines.', 'checkout-facil-brasil' ) ),
+			'cellphone' => array( $defs['cellphone']['label'], __( 'Mask (00) 00000-0000. Also accepts landlines.', 'facilo-checkout-facil-brasil' ) ),
 			'rg'        => array( $defs['rg']['label'], '' ),
-			'ie'        => array( $defs['ie']['label'], __( 'Only shown for businesses, with the Exempt option', 'checkout-facil-brasil' ) ),
+			'ie'        => array( $defs['ie']['label'], __( 'Only shown for businesses, with the Exempt option', 'facilo-checkout-facil-brasil' ) ),
 			'birthdate' => array( $defs['birthdate']['label'], '' ),
-			'gender'    => array( $defs['gender']['label'], __( 'Always with “Prefer not to say”', 'checkout-facil-brasil' ) ),
+			'gender'    => array( $defs['gender']['label'], __( 'Always with “Prefer not to say”', 'facilo-checkout-facil-brasil' ) ),
 		);
-		$names  = array( __( 'Who buys', 'checkout-facil-brasil' ), __( 'Extra details', 'checkout-facil-brasil' ), __( 'Done', 'checkout-facil-brasil' ) );
+		$names  = array( __( 'Who buys', 'facilo-checkout-facil-brasil' ), __( 'Extra details', 'facilo-checkout-facil-brasil' ), __( 'Done', 'facilo-checkout-facil-brasil' ) );
 		$svg    = array(
 			'svg'    => array(
 				'viewbox'         => true,
@@ -480,35 +480,35 @@ class CFBR_Setup {
 		$exit   = self::url( array( 'tab' => 'fields' ) );
 		?>
 		<div class="wrap cfbr-setup" data-step="<?php echo esc_attr( $step ); ?>">
-			<h1 class="screen-reader-text"><?php esc_html_e( 'Checkout Fácil Brasil setup', 'checkout-facil-brasil' ); ?></h1>
+			<h1 class="screen-reader-text"><?php esc_html_e( 'Checkout Fácil Brasil setup', 'facilo-checkout-facil-brasil' ); ?></h1>
 			<header class="cfbr-top">
-				<div class="cfbr-brand"><?php echo self::mark(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static SVG. ?><span><?php esc_html_e( 'Checkout Fácil Brasil', 'checkout-facil-brasil' ); ?></span></div>
+				<div class="cfbr-brand"><?php echo self::mark(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static SVG. ?><span><?php esc_html_e( 'Checkout Fácil Brasil', 'facilo-checkout-facil-brasil' ); ?></span></div>
 				<ol class="cfbr-steps">
 					<?php foreach ( $names as $i => $name ) : ?>
 						<li class="<?php echo esc_attr( $i + 1 < $step ? 'done' : ( $i + 1 === $step ? 'cur' : '' ) ); ?>" data-step="<?php echo esc_attr( $i + 1 ); ?>"><?php echo esc_html( $name ); ?></li>
 					<?php endforeach; ?>
 				</ol>
-				<a class="cfbr-exit" href="<?php echo esc_url( $exit ); ?>"><?php esc_html_e( 'Exit', 'checkout-facil-brasil' ); ?></a>
+				<a class="cfbr-exit" href="<?php echo esc_url( $exit ); ?>"><?php esc_html_e( 'Exit', 'facilo-checkout-facil-brasil' ); ?></a>
 			</header>
 			<div class="cfbr-setup-wrap">
 				<main class="cfbr-q">
 					<?php if ( 3 === $step ) : ?>
-						<p class="cfbr-kick"><?php echo esc_html( sprintf( /* translators: 1: step number, 2: total steps. */ __( 'Step %1$d of %2$d', 'checkout-facil-brasil' ), 3, 3 ) ); ?></p>
+						<p class="cfbr-kick"><?php echo esc_html( sprintf( /* translators: 1: step number, 2: total steps. */ __( 'Step %1$d of %2$d', 'facilo-checkout-facil-brasil' ), 3, 3 ) ); ?></p>
 						<div class="cfbr-done"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="30" fill="#e8edff"/><path d="M19 33l9 9 17-19" fill="none" stroke="#3858e9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-						<h2 class="cfbr-h"><?php esc_html_e( 'All set. See how your checkout looks.', 'checkout-facil-brasil' ); ?></h2>
+						<h2 class="cfbr-h"><?php esc_html_e( 'All set. See how your checkout looks.', 'facilo-checkout-facil-brasil' ); ?></h2>
 						<div class="cfbr-btns">
-							<a class="cfbr-btn pri" href="<?php echo esc_url( function_exists( 'wc_get_checkout_url' ) ? wc_get_checkout_url() : home_url( '/' ) ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Open the checkout', 'checkout-facil-brasil' ); ?></a>
-							<a class="cfbr-btn" href="<?php echo esc_url( $exit ); ?>"><?php esc_html_e( 'Go to the settings', 'checkout-facil-brasil' ); ?></a>
+							<a class="cfbr-btn pri" href="<?php echo esc_url( function_exists( 'wc_get_checkout_url' ) ? wc_get_checkout_url() : home_url( '/' ) ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Open the checkout', 'facilo-checkout-facil-brasil' ); ?></a>
+							<a class="cfbr-btn" href="<?php echo esc_url( $exit ); ?>"><?php esc_html_e( 'Go to the settings', 'facilo-checkout-facil-brasil' ); ?></a>
 						</div>
-						<p class="cfbr-sub"><?php esc_html_e( 'Works on the block checkout and on the classic one.', 'checkout-facil-brasil' ); ?></p>
+						<p class="cfbr-sub"><?php esc_html_e( 'Works on the block checkout and on the classic one.', 'facilo-checkout-facil-brasil' ); ?></p>
 					<?php else : ?>
 						<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="cfbr-setup-form">
 							<input type="hidden" name="action" value="<?php echo esc_attr( self::SETUP ); ?>" />
 							<?php wp_nonce_field( self::SETUP ); ?>
 							<section class="cfbr-panel" data-panel="1" <?php echo 1 === $step ? '' : 'hidden'; ?>>
-								<p class="cfbr-kick"><?php echo esc_html( sprintf( /* translators: 1: step number, 2: total steps. */ __( 'Step %1$d of %2$d', 'checkout-facil-brasil' ), 1, 3 ) ); ?></p>
+								<p class="cfbr-kick"><?php echo esc_html( sprintf( /* translators: 1: step number, 2: total steps. */ __( 'Step %1$d of %2$d', 'facilo-checkout-facil-brasil' ), 1, 3 ) ); ?></p>
 								<fieldset>
-									<legend class="cfbr-h"><?php esc_html_e( 'Who buys in your shop?', 'checkout-facil-brasil' ); ?></legend>
+									<legend class="cfbr-h"><?php esc_html_e( 'Who buys in your shop?', 'facilo-checkout-facil-brasil' ); ?></legend>
 									<div class="cfbr-who">
 										<?php foreach ( $cards as $value => $card ) : ?>
 											<label class="cfbr-card">
@@ -520,11 +520,11 @@ class CFBR_Setup {
 										<?php endforeach; ?>
 									</div>
 								</fieldset>
-								<nav class="cfbr-nav"><span></span><button type="button" class="cfbr-btn pri" data-go="2"><?php esc_html_e( 'Continue', 'checkout-facil-brasil' ); ?></button></nav>
+								<nav class="cfbr-nav"><span></span><button type="button" class="cfbr-btn pri" data-go="2"><?php esc_html_e( 'Continue', 'facilo-checkout-facil-brasil' ); ?></button></nav>
 							</section>
 							<section class="cfbr-panel" data-panel="2" <?php echo 2 === $step ? '' : 'hidden'; ?>>
-								<p class="cfbr-kick"><?php echo esc_html( sprintf( /* translators: 1: step number, 2: total steps. */ __( 'Step %1$d of %2$d', 'checkout-facil-brasil' ), 2, 3 ) ); ?></p>
-								<h2 class="cfbr-h"><?php esc_html_e( 'Which extra details do you want to ask for?', 'checkout-facil-brasil' ); ?></h2>
+								<p class="cfbr-kick"><?php echo esc_html( sprintf( /* translators: 1: step number, 2: total steps. */ __( 'Step %1$d of %2$d', 'facilo-checkout-facil-brasil' ), 2, 3 ) ); ?></p>
+								<h2 class="cfbr-h"><?php esc_html_e( 'Which extra details do you want to ask for?', 'facilo-checkout-facil-brasil' ); ?></h2>
 								<div class="cfbr-list">
 									<?php
 									foreach ( $extras as $field => $extra ) :
@@ -542,22 +542,22 @@ class CFBR_Setup {
 												<?php endif; ?>
 											</label>
 											<span class="cfbr-req" role="radiogroup" aria-label="<?php echo esc_attr( $extra[0] ); ?>">
-												<label><input type="radio" name="cfbr[<?php echo esc_attr( $field ); ?>]" value="optional" <?php checked( 'required' !== $mode ); ?> /><span><?php esc_html_e( 'Optional', 'checkout-facil-brasil' ); ?></span></label>
-												<label><input type="radio" name="cfbr[<?php echo esc_attr( $field ); ?>]" value="required" <?php checked( 'required' === $mode ); ?> /><span><?php esc_html_e( 'Required', 'checkout-facil-brasil' ); ?></span></label>
+												<label><input type="radio" name="cfbr[<?php echo esc_attr( $field ); ?>]" value="optional" <?php checked( 'required' !== $mode ); ?> /><span><?php esc_html_e( 'Optional', 'facilo-checkout-facil-brasil' ); ?></span></label>
+												<label><input type="radio" name="cfbr[<?php echo esc_attr( $field ); ?>]" value="required" <?php checked( 'required' === $mode ); ?> /><span><?php esc_html_e( 'Required', 'facilo-checkout-facil-brasil' ); ?></span></label>
 											</span>
 										</div>
 									<?php endforeach; ?>
 								</div>
-								<p class="cfbr-fixed"><b><?php esc_html_e( 'Always included:', 'checkout-facil-brasil' ); ?></b> <?php esc_html_e( 'CPF or CNPJ, Number with “No number”, and Neighbourhood.', 'checkout-facil-brasil' ); ?></p>
-								<nav class="cfbr-nav"><button type="button" class="cfbr-btn ghost" data-go="1"><?php esc_html_e( 'Back', 'checkout-facil-brasil' ); ?></button><button type="submit" class="cfbr-btn pri"><?php esc_html_e( 'Continue', 'checkout-facil-brasil' ); ?></button></nav>
+								<p class="cfbr-fixed"><b><?php esc_html_e( 'Always included:', 'facilo-checkout-facil-brasil' ); ?></b> <?php esc_html_e( 'CPF or CNPJ, Number with “No number”, and Neighbourhood.', 'facilo-checkout-facil-brasil' ); ?></p>
+								<nav class="cfbr-nav"><button type="button" class="cfbr-btn ghost" data-go="1"><?php esc_html_e( 'Back', 'facilo-checkout-facil-brasil' ); ?></button><button type="submit" class="cfbr-btn pri"><?php esc_html_e( 'Continue', 'facilo-checkout-facil-brasil' ); ?></button></nav>
 							</section>
 						</form>
 					<?php endif; ?>
 				</main>
-				<aside class="cfbr-prev" aria-label="<?php esc_attr_e( 'Preview of your checkout', 'checkout-facil-brasil' ); ?>">
-					<div class="cfbr-prev-h"><span class="cfbr-dot"></span><?php esc_html_e( 'Preview of your checkout', 'checkout-facil-brasil' ); ?> <em><?php esc_html_e( 'live', 'checkout-facil-brasil' ); ?></em></div>
+				<aside class="cfbr-prev" aria-label="<?php esc_attr_e( 'Preview of your checkout', 'facilo-checkout-facil-brasil' ); ?>">
+					<div class="cfbr-prev-h"><span class="cfbr-dot"></span><?php esc_html_e( 'Preview of your checkout', 'facilo-checkout-facil-brasil' ); ?> <em><?php esc_html_e( 'live', 'facilo-checkout-facil-brasil' ); ?></em></div>
 					<?php self::preview( $s, $defs ); ?>
-					<p class="cfbr-prev-f"><?php esc_html_e( 'Works on the block checkout and on the classic one.', 'checkout-facil-brasil' ); ?></p>
+					<p class="cfbr-prev-f"><?php esc_html_e( 'Works on the block checkout and on the classic one.', 'facilo-checkout-facil-brasil' ); ?></p>
 				</aside>
 			</div>
 		</div>
@@ -584,8 +584,8 @@ class CFBR_Setup {
 		};
 		?>
 		<div class="cfbr-pv" data-persons="<?php echo esc_attr( $s['person_type'] ); ?>" data-type="1">
-			<p class="cfbr-pv-sec"><?php esc_html_e( 'Contact information', 'checkout-facil-brasil' ); ?></p>
-			<?php $box( __( 'Email address', 'checkout-facil-brasil' ), 'cliente@exemplo.com.br' ); ?>
+			<p class="cfbr-pv-sec"><?php esc_html_e( 'Contact information', 'facilo-checkout-facil-brasil' ); ?></p>
+			<?php $box( __( 'Email address', 'facilo-checkout-facil-brasil' ), 'cliente@exemplo.com.br' ); ?>
 			<div class="cfbr-pv-pill" data-show="both" role="radiogroup" aria-label="<?php echo esc_attr( $defs['persontype']['label'] ); ?>">
 				<button type="button" class="on" data-type="1" role="radio" aria-checked="true"><?php echo esc_html( $defs['persontype']['options']['1'] ); ?></button>
 				<button type="button" data-type="2" role="radio" aria-checked="false"><?php echo esc_html( $defs['persontype']['options']['2'] ); ?></button>
@@ -599,11 +599,11 @@ class CFBR_Setup {
 			$box( $defs['gender']['label'], $defs['gender']['options'][ array_keys( $defs['gender']['options'] )[2] ], ' data-opt="gender" data-mode="' . esc_attr( $opt( 'gender' ) ) . '"' );
 			$box( $defs['cellphone']['label'], '(11) 98765-4321', ' data-opt="cellphone" data-mode="' . esc_attr( $opt( 'cellphone' ) ) . '"' );
 			?>
-			<p class="cfbr-pv-sec"><?php esc_html_e( 'Billing address', 'checkout-facil-brasil' ); ?></p>
+			<p class="cfbr-pv-sec"><?php esc_html_e( 'Billing address', 'facilo-checkout-facil-brasil' ); ?></p>
 			<?php
 			$box( CFBR_Fields::company_label(), 'Exemplo Comércio Ltda', ' data-show="pj"' );
-			$box( __( 'CEP', 'checkout-facil-brasil' ), '01001-000' );
-			$box( __( 'Address', 'checkout-facil-brasil' ), 'Praça da Sé' );
+			$box( __( 'CEP', 'facilo-checkout-facil-brasil' ), '01001-000' );
+			$box( __( 'Address', 'facilo-checkout-facil-brasil' ), 'Praça da Sé' );
 			?>
 			<div class="cfbr-pv-row">
 				<?php $box( $defs['number']['label'], '120' ); ?>

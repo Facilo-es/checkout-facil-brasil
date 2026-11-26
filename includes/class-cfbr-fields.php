@@ -29,88 +29,88 @@ class CFBR_Fields {
 	public static function definitions() {
 		$fields = array(
 			'persontype'   => array(
-				'label'    => __( 'Person type', 'checkout-facil-brasil' ),
+				'label'    => __( 'Person type', 'facilo-checkout-facil-brasil' ),
 				'location' => 'contact',
 				'priority' => 22,
 				'options'  => array(
-					'1' => __( 'Individual', 'checkout-facil-brasil' ),
-					'2' => __( 'Business', 'checkout-facil-brasil' ),
+					'1' => __( 'Individual', 'facilo-checkout-facil-brasil' ),
+					'2' => __( 'Business', 'facilo-checkout-facil-brasil' ),
 				),
 			),
 			'cpf'          => array(
-				'label'       => __( 'CPF', 'checkout-facil-brasil' ),
+				'label'       => __( 'CPF', 'facilo-checkout-facil-brasil' ),
 				'placeholder' => '000.000.000-00',
 				'location'    => 'contact',
 				'priority'    => 23,
-				'required'    => __( 'Enter the CPF.', 'checkout-facil-brasil' ),
-				'invalid'     => __( 'The CPF you entered is not valid. Check the numbers.', 'checkout-facil-brasil' ),
+				'required'    => __( 'Enter the CPF.', 'facilo-checkout-facil-brasil' ),
+				'invalid'     => __( 'The CPF you entered is not valid. Check the numbers.', 'facilo-checkout-facil-brasil' ),
 			),
 			'rg'           => array(
-				'label'    => __( 'RG', 'checkout-facil-brasil' ),
+				'label'    => __( 'RG', 'facilo-checkout-facil-brasil' ),
 				'location' => 'contact',
 				'priority' => 24,
-				'required' => __( 'Enter the RG.', 'checkout-facil-brasil' ),
+				'required' => __( 'Enter the RG.', 'facilo-checkout-facil-brasil' ),
 			),
 			'cnpj'         => array(
-				'label'       => __( 'CNPJ', 'checkout-facil-brasil' ),
+				'label'       => __( 'CNPJ', 'facilo-checkout-facil-brasil' ),
 				'placeholder' => '00.000.000/0000-00',
-				'help'        => __( 'Accepts the new CNPJ with letters.', 'checkout-facil-brasil' ),
+				'help'        => __( 'Accepts the new CNPJ with letters.', 'facilo-checkout-facil-brasil' ),
 				'location'    => 'contact',
 				'priority'    => 26,
-				'required'    => __( 'Enter the CNPJ.', 'checkout-facil-brasil' ),
-				'invalid'     => __( 'The CNPJ you entered is not valid. Check the letters and numbers.', 'checkout-facil-brasil' ),
+				'required'    => __( 'Enter the CNPJ.', 'facilo-checkout-facil-brasil' ),
+				'invalid'     => __( 'The CNPJ you entered is not valid. Check the letters and numbers.', 'facilo-checkout-facil-brasil' ),
 			),
 			'ie'           => array(
-				'label'    => __( 'State registration', 'checkout-facil-brasil' ),
+				'label'    => __( 'State registration', 'facilo-checkout-facil-brasil' ),
 				'location' => 'contact',
 				'priority' => 27,
-				'required' => __( 'Enter the state registration.', 'checkout-facil-brasil' ),
-				'invalid'  => __( 'The state registration is not valid for the chosen state.', 'checkout-facil-brasil' ),
+				'required' => __( 'Enter the state registration.', 'facilo-checkout-facil-brasil' ),
+				'invalid'  => __( 'The state registration is not valid for the chosen state.', 'facilo-checkout-facil-brasil' ),
 			),
 			'ie_exempt'    => array(
-				'label'    => __( 'Exempt', 'checkout-facil-brasil' ),
+				'label'    => __( 'Exempt', 'facilo-checkout-facil-brasil' ),
 				'location' => 'contact',
 				'priority' => 28,
 			),
 			'birthdate'    => array(
-				'label'       => __( 'Date of birth', 'checkout-facil-brasil' ),
-				'placeholder' => __( 'dd/mm/yyyy', 'checkout-facil-brasil' ),
+				'label'       => __( 'Date of birth', 'facilo-checkout-facil-brasil' ),
+				'placeholder' => __( 'dd/mm/yyyy', 'facilo-checkout-facil-brasil' ),
 				'location'    => 'contact',
 				'priority'    => 31,
-				'required'    => __( 'Enter the date of birth.', 'checkout-facil-brasil' ),
-				'invalid'     => __( 'Enter the date of birth as dd/mm/yyyy.', 'checkout-facil-brasil' ),
+				'required'    => __( 'Enter the date of birth.', 'facilo-checkout-facil-brasil' ),
+				'invalid'     => __( 'Enter the date of birth as dd/mm/yyyy.', 'facilo-checkout-facil-brasil' ),
 			),
 			'gender'       => array(
-				'label'    => __( 'Gender', 'checkout-facil-brasil' ),
+				'label'    => __( 'Gender', 'facilo-checkout-facil-brasil' ),
 				'location' => 'contact',
 				'priority' => 32,
-				'required' => __( 'Choose an option for gender.', 'checkout-facil-brasil' ),
+				'required' => __( 'Choose an option for gender.', 'facilo-checkout-facil-brasil' ),
 				'options'  => self::gender_options(),
 			),
 			'cellphone'    => array(
-				'label'       => __( 'Cell phone', 'checkout-facil-brasil' ),
+				'label'       => __( 'Cell phone', 'facilo-checkout-facil-brasil' ),
 				'placeholder' => '(00) 00000-0000',
 				'location'    => 'contact',
 				'priority'    => 105,
-				'required'    => __( 'Enter the cell phone.', 'checkout-facil-brasil' ),
-				'invalid'     => __( 'Enter the cell phone with area code, such as (11) 91234-5678.', 'checkout-facil-brasil' ),
+				'required'    => __( 'Enter the cell phone.', 'facilo-checkout-facil-brasil' ),
+				'invalid'     => __( 'Enter the cell phone with area code, such as (11) 91234-5678.', 'facilo-checkout-facil-brasil' ),
 			),
 			'number'       => array(
-				'label'    => __( 'Number', 'checkout-facil-brasil' ),
+				'label'    => __( 'Number', 'facilo-checkout-facil-brasil' ),
 				'location' => 'address',
 				'priority' => 55,
-				'required' => __( 'Enter the number.', 'checkout-facil-brasil' ),
+				'required' => __( 'Enter the number.', 'facilo-checkout-facil-brasil' ),
 			),
 			'nonumber'     => array(
-				'label'    => __( 'No number', 'checkout-facil-brasil' ),
+				'label'    => __( 'No number', 'facilo-checkout-facil-brasil' ),
 				'location' => 'address',
 				'priority' => 56,
 			),
 			'neighborhood' => array(
-				'label'    => __( 'Neighbourhood', 'checkout-facil-brasil' ),
+				'label'    => __( 'Neighbourhood', 'facilo-checkout-facil-brasil' ),
 				'location' => 'address',
 				'priority' => 65,
-				'required' => __( 'Enter the neighbourhood.', 'checkout-facil-brasil' ),
+				'required' => __( 'Enter the neighbourhood.', 'facilo-checkout-facil-brasil' ),
 			),
 		);
 		foreach ( $fields as $id => $field ) {
@@ -138,9 +138,9 @@ class CFBR_Fields {
 	 */
 	public static function gender_options() {
 		$labels = array(
-			__( 'Female', 'checkout-facil-brasil' ),
-			__( 'Male', 'checkout-facil-brasil' ),
-			__( 'Prefer not to say', 'checkout-facil-brasil' ),
+			__( 'Female', 'facilo-checkout-facil-brasil' ),
+			__( 'Male', 'facilo-checkout-facil-brasil' ),
+			__( 'Prefer not to say', 'facilo-checkout-facil-brasil' ),
 		);
 		return array_combine( $labels, $labels );
 	}
@@ -151,7 +151,7 @@ class CFBR_Fields {
 	 * @return string
 	 */
 	public static function company_required_message() {
-		return __( 'Enter the company legal name.', 'checkout-facil-brasil' );
+		return __( 'Enter the company legal name.', 'facilo-checkout-facil-brasil' );
 	}
 
 	/**
@@ -160,7 +160,7 @@ class CFBR_Fields {
 	 * @return string
 	 */
 	public static function company_label() {
-		return __( 'Company legal name', 'checkout-facil-brasil' );
+		return __( 'Company legal name', 'facilo-checkout-facil-brasil' );
 	}
 
 	/**

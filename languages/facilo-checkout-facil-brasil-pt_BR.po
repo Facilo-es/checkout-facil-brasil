@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Checkout Fácil Brasil 1.0.0\n"
-"Language: es_ES\n"
+"Project-Id-Version: Facilo Checkout Fácil Brasil 1.0.0\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Domain: checkout-facil-brasil\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: facilo-checkout-facil-brasil\n"
 
 #. Plugin Name of the plugin
 #: checkout-facil-brasil.php
-msgid "Checkout Fácil Brasil for WooCommerce"
-msgstr "Checkout Fácil Brasil para WooCommerce"
+msgid "Facilo Checkout Fácil Brasil"
+msgstr "Facilo Checkout Fácil Brasil"
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
@@ -22,7 +22,7 @@ msgstr "https://facilo.es"
 #. Description of the plugin
 #: checkout-facil-brasil.php
 msgid "CPF, CNPJ (including the new alphanumeric CNPJ), Número, Bairro and other Brazilian fields for the WooCommerce block and classic checkouts."
-msgstr "CPF, CNPJ (incluido el nuevo CNPJ alfanumérico), Número, Bairro y otros campos brasileños para el checkout de bloques y el clásico de WooCommerce."
+msgstr "CPF, CNPJ (incluindo o novo CNPJ alfanumérico), Número, Bairro e outros campos brasileiros para o checkout em blocos e o clássico do WooCommerce."
 
 #. Author of the plugin
 #: checkout-facil-brasil.php
@@ -31,19 +31,19 @@ msgstr "Facilo"
 
 #: includes/class-cfbr-fields-blocks.php:865
 msgid "Fill in the CPF or the CNPJ, depending on the person type"
-msgstr "Rellena el CPF o el CNPJ, según el tipo de persona"
+msgstr "Preencha o CPF ou o CNPJ, conforme o tipo de pessoa"
 
 #: includes/class-cfbr-fields.php:32
 msgid "Person type"
-msgstr "Tipo de persona"
+msgstr "Tipo de pessoa"
 
 #: includes/class-cfbr-fields.php:36
 msgid "Individual"
-msgstr "Particular"
+msgstr "Pessoa Física"
 
 #: includes/class-cfbr-fields.php:37
 msgid "Business"
-msgstr "Empresa"
+msgstr "Pessoa Jurídica"
 
 #: includes/class-cfbr-fields.php:41
 msgid "CPF"
@@ -51,11 +51,11 @@ msgstr "CPF"
 
 #: includes/class-cfbr-fields.php:45
 msgid "Enter the CPF."
-msgstr "Introduce el CPF."
+msgstr "Informe o CPF."
 
 #: includes/class-cfbr-fields.php:46
 msgid "The CPF you entered is not valid. Check the numbers."
-msgstr "El CPF introducido no es válido. Revisa los números."
+msgstr "O CPF informado não é válido. Confira os números."
 
 #: includes/class-cfbr-fields.php:49
 msgid "RG"
@@ -63,7 +63,7 @@ msgstr "RG"
 
 #: includes/class-cfbr-fields.php:52
 msgid "Enter the RG."
-msgstr "Introduce el RG."
+msgstr "Informe o RG."
 
 #: includes/class-cfbr-fields.php:55
 msgid "CNPJ"
@@ -71,15 +71,15 @@ msgstr "CNPJ"
 
 #: includes/class-cfbr-fields.php:57
 msgid "Accepts the new CNPJ with letters."
-msgstr "Acepta el nuevo CNPJ con letras."
+msgstr "Aceita o novo CNPJ com letras."
 
 #: includes/class-cfbr-fields.php:60
 msgid "Enter the CNPJ."
-msgstr "Introduce el CNPJ."
+msgstr "Informe o CNPJ."
 
 #: includes/class-cfbr-fields.php:61
 msgid "The CNPJ you entered is not valid. Check the letters and numbers."
-msgstr "El CNPJ introducido no es válido. Revisa las letras y los números."
+msgstr "O CNPJ informado não é válido. Confira letras e números."
 
 #: includes/class-cfbr-fields.php:64
 msgid "State registration"
@@ -87,19 +87,19 @@ msgstr "Inscrição Estadual"
 
 #: includes/class-cfbr-fields.php:67
 msgid "Enter the state registration."
-msgstr "Introduce la Inscrição Estadual."
+msgstr "Informe a Inscrição Estadual."
 
 #: includes/class-cfbr-fields.php:68
 msgid "The state registration is not valid for the chosen state."
-msgstr "La Inscrição Estadual no es válida para el estado elegido."
+msgstr "A Inscrição Estadual não é válida para o estado escolhido."
 
 #: includes/class-cfbr-fields.php:71
 msgid "Exempt"
-msgstr "Exento"
+msgstr "Isento"
 
 #: includes/class-cfbr-fields.php:76
 msgid "Date of birth"
-msgstr "Fecha de nacimiento"
+msgstr "Data de nascimento"
 
 #: includes/class-cfbr-fields.php:77
 msgid "dd/mm/yyyy"
@@ -107,31 +107,31 @@ msgstr "dd/mm/aaaa"
 
 #: includes/class-cfbr-fields.php:80
 msgid "Enter the date of birth."
-msgstr "Introduce la fecha de nacimiento."
+msgstr "Informe a data de nascimento."
 
 #: includes/class-cfbr-fields.php:81
 msgid "Enter the date of birth as dd/mm/yyyy."
-msgstr "Introduce la fecha de nacimiento como dd/mm/aaaa."
+msgstr "Informe a data de nascimento como dd/mm/aaaa."
 
 #: includes/class-cfbr-fields.php:84
 msgid "Gender"
-msgstr "Género"
+msgstr "Gênero"
 
 #: includes/class-cfbr-fields.php:87
 msgid "Choose an option for gender."
-msgstr "Elige una opción de género."
+msgstr "Escolha uma opção de gênero."
 
 #: includes/class-cfbr-fields.php:91
 msgid "Cell phone"
-msgstr "Móvil"
+msgstr "Celular"
 
 #: includes/class-cfbr-fields.php:95
 msgid "Enter the cell phone."
-msgstr "Introduce el móvil."
+msgstr "Informe o celular."
 
 #: includes/class-cfbr-fields.php:96
 msgid "Enter the cell phone with area code, such as (11) 91234-5678."
-msgstr "Introduce el móvil con el prefijo de zona, como (11) 91234-5678."
+msgstr "Informe o celular com DDD, como (11) 91234-5678."
 
 #: includes/class-cfbr-fields.php:99
 #: includes/class-cfbr-setup.php:347
@@ -140,24 +140,24 @@ msgstr "Número"
 
 #: includes/class-cfbr-fields.php:102
 msgid "Enter the number."
-msgstr "Introduce el número."
+msgstr "Informe o número."
 
 #: includes/class-cfbr-fields.php:105
 msgid "No number"
-msgstr "Sin número"
+msgstr "Sem número"
 
 #: includes/class-cfbr-fields.php:110
 #: includes/class-cfbr-setup.php:344
 msgid "Neighbourhood"
-msgstr "Barrio"
+msgstr "Bairro"
 
 #: includes/class-cfbr-fields.php:113
 msgid "Enter the neighbourhood."
-msgstr "Introduce el barrio."
+msgstr "Informe o bairro."
 
 #: includes/class-cfbr-fields.php:141
 msgid "Female"
-msgstr "Femenino"
+msgstr "Feminino"
 
 #: includes/class-cfbr-fields.php:142
 msgid "Male"
@@ -165,36 +165,36 @@ msgstr "Masculino"
 
 #: includes/class-cfbr-fields.php:143
 msgid "Prefer not to say"
-msgstr "Prefiero no decirlo"
+msgstr "Prefiro não informar"
 
 #: includes/class-cfbr-fields.php:154
 msgid "Enter the company legal name."
-msgstr "Introduce la razón social."
+msgstr "Informe a razão social."
 
 #: includes/class-cfbr-fields.php:163
 #: includes/class-cfbr-setup.php:274
 msgid "Company legal name"
-msgstr "Razón social"
+msgstr "Razão social"
 
 #: includes/class-cfbr-import-legacy.php:117
 msgid "Your Brazilian Market on WooCommerce data has been imported"
-msgstr "Se han importado tus datos de Brazilian Market on WooCommerce"
+msgstr "Seus dados do Brazilian Market on WooCommerce foram importados"
 
 #: includes/class-cfbr-import-legacy.php:118
 msgid "Brazilian Market on WooCommerce is still active"
-msgstr "Brazilian Market on WooCommerce sigue activo"
+msgstr "O Brazilian Market on WooCommerce ainda está ativo"
 
 #: includes/class-cfbr-import-legacy.php:121
 msgid "Orders, customers and settings stay the same. To avoid duplicate fields at checkout, deactivate the old plugin."
-msgstr "Los pedidos, clientes y ajustes siguen igual. Para evitar campos duplicados en el checkout, desactiva el plugin antiguo."
+msgstr "Pedidos, clientes e configurações continuam iguais. Para não ter campos duplicados no checkout, desative o plugin antigo."
 
 #: includes/class-cfbr-import-legacy.php:125
 msgid "Deactivate the old plugin"
-msgstr "Desactivar el plugin antiguo"
+msgstr "Desativar o plugin antigo"
 
 #: includes/class-cfbr-import-legacy.php:138
 msgid "You are not allowed to deactivate plugins."
-msgstr "No tienes permiso para desactivar plugins."
+msgstr "Você não tem permissão para desativar plugins."
 
 #: includes/class-cfbr-order-data.php:353
 msgid "Number."
@@ -202,15 +202,15 @@ msgstr "Número."
 
 #: includes/class-cfbr-order-data.php:354
 msgid "Neighbourhood."
-msgstr "Barrio."
+msgstr "Bairro."
 
 #: includes/class-cfbr-order-data.php:355
 msgid "Person type: F (individual) or J (business)."
-msgstr "Tipo de persona: F (particular) o J (empresa)."
+msgstr "Tipo de pessoa: F (física) ou J (jurídica)."
 
 #: includes/class-cfbr-order-data.php:356
 msgid "CPF, digits only."
-msgstr "CPF, solo números."
+msgstr "CPF, só números."
 
 #: includes/class-cfbr-order-data.php:357
 msgid "RG."
@@ -218,7 +218,7 @@ msgstr "RG."
 
 #: includes/class-cfbr-order-data.php:358
 msgid "CNPJ, letters and digits only."
-msgstr "CNPJ, solo letras y números."
+msgstr "CNPJ, só letras e números."
 
 #: includes/class-cfbr-order-data.php:359
 msgid "State registration."
@@ -226,19 +226,19 @@ msgstr "Inscrição Estadual."
 
 #: includes/class-cfbr-order-data.php:360
 msgid "Date of birth."
-msgstr "Fecha de nacimiento."
+msgstr "Data de nascimento."
 
 #: includes/class-cfbr-order-data.php:361
 msgid "Gender, first letter."
-msgstr "Género, primera letra."
+msgstr "Gênero, primeira letra."
 
 #: includes/class-cfbr-order-data.php:362
 msgid "Cell phone."
-msgstr "Móvil."
+msgstr "Celular."
 
 #: includes/class-cfbr-privacy.php:61
 msgid "Suggested text for stores that use Checkout Fácil Brasil. Adjust it to the fields you ask for."
-msgstr "Texto sugerido para tiendas que usan Checkout Fácil Brasil. Ajústalo a los campos que pides."
+msgstr "Texto sugerido para lojas que usam o Checkout Fácil Brasil. Ajuste-o aos campos que você pede."
 
 #: includes/class-cfbr-privacy.php:62
 msgid "Suggested text:"
@@ -246,7 +246,7 @@ msgstr "Texto sugerido:"
 
 #: includes/class-cfbr-privacy.php:63
 msgid "At checkout we ask for your CPF or CNPJ and, depending on the store’s settings, your RG, state registration, date of birth, gender and mobile number, as well as the number and neighbourhood of your address. We use this data to issue the invoice for your purchase, to deliver your order and to contact you about it. We keep it with your order for as long as the tax law requires. This data is stored only in our store and is not sent to other services by this plugin."
-msgstr "En el checkout pedimos tu CPF o CNPJ y, según los ajustes de la tienda, tu RG, Inscrição Estadual, fecha de nacimiento, género y móvil, además del número y el barrio de tu dirección. Usamos estos datos para emitir la factura de tu compra, entregar tu pedido y contactarte sobre él. Los guardamos con tu pedido durante el tiempo que exige la ley fiscal. Estos datos se quedan solo en nuestra tienda y este plugin no los envía a otros servicios."
+msgstr "No checkout pedimos seu CPF ou CNPJ e, conforme as configurações da loja, seu RG, Inscrição Estadual, data de nascimento, gênero e celular, além do número e do bairro do seu endereço. Usamos esses dados para emitir a nota fiscal da sua compra, entregar seu pedido e falar com você sobre ele. Guardamos os dados com o seu pedido pelo tempo que a lei fiscal exige. Esses dados ficam só na nossa loja e este plugin não os envia a outros serviços."
 
 #: includes/class-cfbr-privacy.php:64
 #: includes/class-cfbr-setup.php:51
@@ -259,21 +259,21 @@ msgstr "Checkout Fácil Brasil"
 #: includes/class-cfbr-privacy.php:75
 #: includes/class-cfbr-privacy.php:89
 msgid "Checkout Fácil Brasil: customer data"
-msgstr "Checkout Fácil Brasil: datos del cliente"
+msgstr "Checkout Fácil Brasil: dados do cliente"
 
 #. translators: %s: field name.
 #: includes/class-cfbr-privacy.php:107
 #, php-format
 msgid "%s (shipping)"
-msgstr "%s (envío)"
+msgstr "%s (entrega)"
 
 #: includes/class-cfbr-privacy.php:140
 msgid "Brazilian checkout fields"
-msgstr "Campos brasileños del checkout"
+msgstr "Campos brasileiros do checkout"
 
 #: includes/class-cfbr-setup.php:66
 msgid "Settings"
-msgstr "Ajustes"
+msgstr "Configurações"
 
 #: includes/class-cfbr-setup.php:101
 msgid "Fields"
@@ -281,7 +281,7 @@ msgstr "Campos"
 
 #: includes/class-cfbr-setup.php:105
 msgid "Behaviour"
-msgstr "Comportamiento"
+msgstr "Comportamento"
 
 #: includes/class-cfbr-setup.php:109
 msgid "Pro"
@@ -291,23 +291,23 @@ msgstr "Pro"
 #: includes/class-cfbr-setup.php:391
 #: includes/class-cfbr-setup.php:412
 msgid "You are not allowed to change these settings."
-msgstr "No tienes permiso para cambiar estos ajustes."
+msgstr "Você não tem permissão para mudar estas configurações."
 
 #: includes/class-cfbr-setup.php:146
 msgid "Settings saved."
-msgstr "Ajustes guardados."
+msgstr "Configurações salvas."
 
 #: includes/class-cfbr-setup.php:150
 msgid "The old plugin is off. Your Brazilian fields now come from Checkout Fácil Brasil."
-msgstr "El plugin antiguo está desactivado. Tus campos brasileños ahora vienen de Checkout Fácil Brasil."
+msgstr "O plugin antigo foi desativado. Seus campos brasileiros agora vêm do Checkout Fácil Brasil."
 
 #: includes/class-cfbr-setup.php:161
 msgid "Run the setup again"
-msgstr "Repetir la configuración inicial"
+msgstr "Refazer a configuração inicial"
 
 #: includes/class-cfbr-setup.php:185
 msgid "Off"
-msgstr "Desactivado"
+msgstr "Desligado"
 
 #: includes/class-cfbr-setup.php:186
 #: includes/class-cfbr-setup.php:538
@@ -317,138 +317,138 @@ msgstr "Opcional"
 #: includes/class-cfbr-setup.php:187
 #: includes/class-cfbr-setup.php:539
 msgid "Required"
-msgstr "Obligatorio"
+msgstr "Obrigatório"
 
 #: includes/class-cfbr-setup.php:188
 msgid "Required, instead of Phone"
-msgstr "Obligatorio, en lugar del Teléfono"
+msgstr "Obrigatório, no lugar do Telefone"
 
 #: includes/class-cfbr-setup.php:199
 #: includes/class-cfbr-setup.php:441
 msgid "Individuals and businesses"
-msgstr "Particulares y empresas"
+msgstr "Pessoa Física e Jurídica"
 
 #: includes/class-cfbr-setup.php:200
 #: includes/class-cfbr-setup.php:442
 msgid "Individuals only (CPF)"
-msgstr "Solo particulares (CPF)"
+msgstr "Só Pessoa Física (CPF)"
 
 #: includes/class-cfbr-setup.php:201
 #: includes/class-cfbr-setup.php:443
 msgid "Businesses only (CNPJ)"
-msgstr "Solo empresas (CNPJ)"
+msgstr "Só Pessoa Jurídica (CNPJ)"
 
 #: includes/class-cfbr-setup.php:202
 #: includes/class-cfbr-setup.php:444
 msgid "Do not ask for a document"
-msgstr "No pedir documento"
+msgstr "Não pedir documento"
 
 #: includes/class-cfbr-setup.php:271
 msgid "Which fields the checkout asks for"
-msgstr "Qué campos pide el checkout"
+msgstr "Quais campos o checkout pede"
 
 #: includes/class-cfbr-setup.php:273
 #: includes/class-cfbr-setup.php:504
 msgid "Who buys in your shop?"
-msgstr "¿Quién compra en tu tienda?"
+msgstr "Quem compra na sua loja?"
 
 #: includes/class-cfbr-setup.php:274
 msgid "Required for businesses. It uses WooCommerce’s own Company field."
-msgstr "Obligatoria para empresas. Usa el propio campo Empresa de WooCommerce."
+msgstr "Obrigatória para Pessoa Jurídica. Usa o próprio campo Empresa do WooCommerce."
 
 #: includes/class-cfbr-setup.php:275
 #: includes/class-cfbr-setup.php:447
 msgid "Mask (00) 00000-0000. Also accepts landlines."
-msgstr "Máscara (00) 00000-0000. También acepta fijos."
+msgstr "Máscara (00) 00000-0000. Também aceita fixo."
 
 #: includes/class-cfbr-setup.php:276
 msgid "Shown for individuals."
-msgstr "Se muestra a particulares."
+msgstr "Aparece para Pessoa Física."
 
 #: includes/class-cfbr-setup.php:277
 msgid "Shown for businesses, with an Exempt option."
-msgstr "Se muestra a empresas, con la opción Exento."
+msgstr "Aparece para Pessoa Jurídica, com a opção Isento."
 
 #: includes/class-cfbr-setup.php:279
 msgid "Always includes “Prefer not to say”."
-msgstr "Siempre incluye “Prefiero no decirlo”."
+msgstr "Sempre inclui “Prefiro não informar”."
 
 #: includes/class-cfbr-setup.php:280
 msgid "Neighbourhood is required"
-msgstr "Barrio obligatorio"
+msgstr "Bairro obrigatório"
 
 #: includes/class-cfbr-setup.php:282
 #: includes/class-cfbr-setup.php:299
 msgid "Save changes"
-msgstr "Guardar cambios"
+msgstr "Salvar alterações"
 
 #: includes/class-cfbr-setup.php:293
 msgid "How the fields behave"
-msgstr "Cómo se comportan los campos"
+msgstr "Como os campos se comportam"
 
 #: includes/class-cfbr-setup.php:295
 msgid "Format while typing"
-msgstr "Formatear al escribir"
+msgstr "Formatar ao digitar"
 
 #: includes/class-cfbr-setup.php:295
 msgid "Adds the dots, slashes and dashes to CPF, CNPJ, CEP and phone numbers as the customer types."
-msgstr "Añade los puntos, barras y guiones al CPF, CNPJ, CEP y teléfonos mientras el cliente escribe."
+msgstr "Coloca pontos, barras e traços no CPF, CNPJ, CEP e telefones enquanto o cliente digita."
 
 #: includes/class-cfbr-setup.php:296
 msgid "Only for addresses in Brazil"
-msgstr "Solo para direcciones en Brasil"
+msgstr "Só para endereços no Brasil"
 
 #: includes/class-cfbr-setup.php:296
 msgid "Customers abroad do not see the CPF and CNPJ fields."
-msgstr "Los clientes del extranjero no ven los campos CPF y CNPJ."
+msgstr "Clientes no exterior não veem os campos de CPF e CNPJ."
 
 #: includes/class-cfbr-setup.php:297
 msgid "Show “No number”"
-msgstr "Mostrar “Sin número”"
+msgstr "Mostrar “Sem número”"
 
 #: includes/class-cfbr-setup.php:297
 msgid "A box next to Number that stores S/N."
-msgstr "Una casilla junto a Número que guarda S/N."
+msgstr "Uma caixa ao lado de Número que grava S/N."
 
 #: includes/class-cfbr-setup.php:320
 msgid "Address filled from the CEP: the customer types 8 digits and the rest appears on its own."
-msgstr "Dirección desde el CEP: el cliente escribe 8 dígitos y el resto aparece solo."
+msgstr "Endereço pelo CEP: o cliente digita 8 números e o resto aparece sozinho."
 
 #: includes/class-cfbr-setup.php:321
 msgid "Company details from the CNPJ, with a warning when the company is not active at the Receita."
-msgstr "Datos de la empresa desde el CNPJ, con un aviso cuando la empresa no está activa en la Receita."
+msgstr "Dados da empresa pelo CNPJ, com aviso quando a empresa não está ativa na Receita."
 
 #: includes/class-cfbr-setup.php:322
 msgid "State registration checked for each state."
-msgstr "Inscrição Estadual comprobada para cada estado."
+msgstr "Inscrição Estadual conferida para cada estado."
 
 #: includes/class-cfbr-setup.php:323
 msgid "Sign up and log in with CPF or CNPJ."
-msgstr "Registro e inicio de sesión con CPF o CNPJ."
+msgstr "Cadastro e login com CPF ou CNPJ."
 
 #: includes/class-cfbr-setup.php:324
 msgid "Order search by CPF/CNPJ and documents on PDF invoices."
-msgstr "Búsqueda de pedidos por CPF/CNPJ y documentos en las facturas PDF."
+msgstr "Busca de pedidos por CPF/CNPJ e documentos nas faturas em PDF."
 
 #: includes/class-cfbr-setup.php:325
 msgid "CSV report for your accountant."
-msgstr "Informe CSV para tu gestor."
+msgstr "Relatório CSV para o seu contador."
 
 #: includes/class-cfbr-setup.php:330
 msgid "Less typing at checkout, fewer abandoned carts"
-msgstr "Menos escritura en el checkout, menos carritos abandonados"
+msgstr "Menos digitação no checkout, menos carrinhos abandonados"
 
 #: includes/class-cfbr-setup.php:336
 msgid "US$ 19 per year for one shop · US$ 59 per year for unlimited shops"
-msgstr "19 US$ al año para una tienda · 59 US$ al año para tiendas ilimitadas"
+msgstr "US$ 19 por ano para uma loja · US$ 59 por ano para lojas ilimitadas"
 
 #: includes/class-cfbr-setup.php:337
 msgid "Discover Pro"
-msgstr "Descubre Pro"
+msgstr "Conheça o Pro"
 
 #: includes/class-cfbr-setup.php:338
 msgid "Secure payment through Freemius, in US dollars. Refund on request within 14 days."
-msgstr "Pago seguro a través de Freemius, en dólares estadounidenses. 14 días para pedir el reembolso."
+msgstr "Pagamento seguro pela Freemius, em dólares americanos. 14 dias para pedir reembolso."
 
 #: includes/class-cfbr-setup.php:341
 #: includes/class-cfbr-setup.php:598
@@ -458,55 +458,55 @@ msgstr "CEP"
 #: includes/class-cfbr-setup.php:342
 #: includes/class-cfbr-setup.php:599
 msgid "Address"
-msgstr "Dirección"
+msgstr "Endereço"
 
 #: includes/class-cfbr-setup.php:345
 msgid "City"
-msgstr "Ciudad"
+msgstr "Cidade"
 
 #: includes/class-cfbr-setup.php:441
 msgid "CPF or CNPJ, the customer chooses"
-msgstr "CPF o CNPJ, elige el cliente"
+msgstr "CPF ou CNPJ, o cliente escolhe"
 
 #: includes/class-cfbr-setup.php:442
 msgid "Shops that sell to consumers"
-msgstr "Tiendas que venden a consumidores"
+msgstr "Lojas que vendem ao consumidor"
 
 #: includes/class-cfbr-setup.php:443
 msgid "Wholesale and B2B sales"
-msgstr "Venta al por mayor y B2B"
+msgstr "Atacado e vendas B2B"
 
 #: includes/class-cfbr-setup.php:444
 msgid "Only number and neighbourhood in the address"
-msgstr "Solo número y barrio en la dirección"
+msgstr "Só número e bairro no endereço"
 
 #: includes/class-cfbr-setup.php:449
 msgid "Only shown for businesses, with the Exempt option"
-msgstr "Solo se muestra a empresas, con la opción Exento"
+msgstr "Só aparece para Pessoa Jurídica, com a opção Isento"
 
 #: includes/class-cfbr-setup.php:451
 msgid "Always with “Prefer not to say”"
-msgstr "Siempre con “Prefiero no decirlo”"
+msgstr "Sempre com “Prefiro não informar”"
 
 #: includes/class-cfbr-setup.php:453
 msgid "Who buys"
-msgstr "Quién compra"
+msgstr "Quem compra"
 
 #: includes/class-cfbr-setup.php:453
 msgid "Extra details"
-msgstr "Datos extra"
+msgstr "Dados extras"
 
 #: includes/class-cfbr-setup.php:453
 msgid "Done"
-msgstr "Listo"
+msgstr "Pronto"
 
 #: includes/class-cfbr-setup.php:476
 msgid "Checkout Fácil Brasil setup"
-msgstr "Configuración de Checkout Fácil Brasil"
+msgstr "Configuração do Checkout Fácil Brasil"
 
 #: includes/class-cfbr-setup.php:484
 msgid "Exit"
-msgstr "Salir"
+msgstr "Sair"
 
 #. translators: 1: step number, 2: total steps.
 #: includes/class-cfbr-setup.php:489
@@ -514,24 +514,24 @@ msgstr "Salir"
 #: includes/class-cfbr-setup.php:519
 #, php-format
 msgid "Step %1$d of %2$d"
-msgstr "Paso %1$d de %2$d"
+msgstr "Passo %1$d de %2$d"
 
 #: includes/class-cfbr-setup.php:491
 msgid "All set. See how your checkout looks."
-msgstr "Todo listo. Mira cómo ha quedado tu checkout."
+msgstr "Tudo pronto. Veja como ficou o seu checkout."
 
 #: includes/class-cfbr-setup.php:493
 msgid "Open the checkout"
-msgstr "Abrir el checkout"
+msgstr "Abrir o checkout"
 
 #: includes/class-cfbr-setup.php:494
 msgid "Go to the settings"
-msgstr "Ir a los ajustes"
+msgstr "Ir para as configurações"
 
 #: includes/class-cfbr-setup.php:496
 #: includes/class-cfbr-setup.php:553
 msgid "Works on the block checkout and on the classic one."
-msgstr "Funciona en el checkout de bloques y en el clásico."
+msgstr "Funciona no checkout em blocos e no clássico."
 
 #: includes/class-cfbr-setup.php:516
 #: includes/class-cfbr-setup.php:545
@@ -541,37 +541,37 @@ msgstr "Continuar"
 #. translators: 1: step number, 2: total steps.
 #: includes/class-cfbr-setup.php:520
 msgid "Which extra details do you want to ask for?"
-msgstr "¿Qué datos extra quieres pedir?"
+msgstr "Quais dados extras você quer pedir?"
 
 #: includes/class-cfbr-setup.php:544
 msgid "Always included:"
-msgstr "Siempre incluidos:"
+msgstr "Sempre incluídos:"
 
 #: includes/class-cfbr-setup.php:544
 msgid "CPF or CNPJ, Number with “No number”, and Neighbourhood."
-msgstr "CPF o CNPJ, Número con “Sin número” y Barrio."
+msgstr "CPF ou CNPJ, Número com “Sem número” e Bairro."
 
 #: includes/class-cfbr-setup.php:545
 msgid "Back"
-msgstr "Atrás"
+msgstr "Voltar"
 
 #: includes/class-cfbr-setup.php:550
 #: includes/class-cfbr-setup.php:551
 msgid "Preview of your checkout"
-msgstr "Vista previa de tu checkout"
+msgstr "Prévia do seu checkout"
 
 #: includes/class-cfbr-setup.php:551
 msgid "live"
-msgstr "en directo"
+msgstr "ao vivo"
 
 #: includes/class-cfbr-setup.php:580
 msgid "Contact information"
-msgstr "Información de contacto"
+msgstr "Informações de contato"
 
 #: includes/class-cfbr-setup.php:581
 msgid "Email address"
-msgstr "Correo electrónico"
+msgstr "Endereço de e-mail"
 
 #: includes/class-cfbr-setup.php:595
 msgid "Billing address"
-msgstr "Dirección de facturación"
+msgstr "Endereço de cobrança"

@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       Checkout Fácil Brasil for WooCommerce
- * Plugin URI:        https://facilo.es
+ * Plugin Name:       Facilo Checkout Fácil Brasil
+ * Plugin URI:        https://github.com/Facilo-es/checkout-facil-brasil
  * Description:       CPF, CNPJ (including the new alphanumeric CNPJ), Número, Bairro and other Brazilian fields for the WooCommerce block and classic checkouts.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.6
  * Requires PHP:      7.4
  * Requires Plugins:  woocommerce
@@ -11,7 +11,7 @@
  * Author URI:        https://facilo.es
  * License:           GPLv2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       checkout-facil-brasil
+ * Text Domain:       facilo-checkout-facil-brasil
  * Domain Path:       /languages
  * WC requires at least: 8.9
  * WC tested up to:   11.2
@@ -21,7 +21,12 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'CFBR_VERSION', '1.0.0' );
+// A copy from before the wordpress.org rename (folder checkout-facil-brasil) may still be installed: only one may load.
+if ( defined( 'CFBR_VERSION' ) ) {
+	return;
+}
+
+define( 'CFBR_VERSION', '1.0.1' );
 define( 'CFBR_FILE', __FILE__ );
 define( 'CFBR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'CFBR_URL', plugin_dir_url( __FILE__ ) );
@@ -48,7 +53,7 @@ add_action(
 	'init',
 	function () {
 		// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Ships pt_BR and es_ES until translate.wordpress.org has them; WordPress's own language packs still load first.
-		load_plugin_textdomain( 'checkout-facil-brasil', false, dirname( plugin_basename( CFBR_FILE ) ) . '/languages' );
+		load_plugin_textdomain( 'facilo-checkout-facil-brasil', false, dirname( plugin_basename( CFBR_FILE ) ) . '/languages' );
 	},
 	-1
 );

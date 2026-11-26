@@ -350,16 +350,16 @@ class CFBR_Order_Data {
 	 */
 	public static function rest_schema( $properties ) {
 		$billing = array(
-			'number'       => __( 'Number.', 'checkout-facil-brasil' ),
-			'neighborhood' => __( 'Neighbourhood.', 'checkout-facil-brasil' ),
-			'persontype'   => __( 'Person type: F (individual) or J (business).', 'checkout-facil-brasil' ),
-			'cpf'          => __( 'CPF, digits only.', 'checkout-facil-brasil' ),
-			'rg'           => __( 'RG.', 'checkout-facil-brasil' ),
-			'cnpj'         => __( 'CNPJ, letters and digits only.', 'checkout-facil-brasil' ),
-			'ie'           => __( 'State registration.', 'checkout-facil-brasil' ),
-			'birthdate'    => __( 'Date of birth.', 'checkout-facil-brasil' ),
-			'gender'       => __( 'Gender, first letter.', 'checkout-facil-brasil' ),
-			'cellphone'    => __( 'Cell phone.', 'checkout-facil-brasil' ),
+			'number'       => __( 'Number.', 'facilo-checkout-facil-brasil' ),
+			'neighborhood' => __( 'Neighbourhood.', 'facilo-checkout-facil-brasil' ),
+			'persontype'   => __( 'Person type: F (individual) or J (business).', 'facilo-checkout-facil-brasil' ),
+			'cpf'          => __( 'CPF, digits only.', 'facilo-checkout-facil-brasil' ),
+			'rg'           => __( 'RG.', 'facilo-checkout-facil-brasil' ),
+			'cnpj'         => __( 'CNPJ, letters and digits only.', 'facilo-checkout-facil-brasil' ),
+			'ie'           => __( 'State registration.', 'facilo-checkout-facil-brasil' ),
+			'birthdate'    => __( 'Date of birth.', 'facilo-checkout-facil-brasil' ),
+			'gender'       => __( 'Gender, first letter.', 'facilo-checkout-facil-brasil' ),
+			'cellphone'    => __( 'Cell phone.', 'facilo-checkout-facil-brasil' ),
 		);
 		foreach ( $billing as $key => $description ) {
 			$properties['billing']['properties'][ $key ] = array(

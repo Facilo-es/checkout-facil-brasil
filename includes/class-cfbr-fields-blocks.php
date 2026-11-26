@@ -704,7 +704,7 @@ class CFBR_Fields_Blocks {
 			self::$last_values = $values;
 		} catch ( Exception $e ) {
 			if ( function_exists( 'wc_get_logger' ) ) {
-				wc_get_logger()->warning( 'Checkout Fácil Brasil could not copy the fields: ' . $e->getMessage(), array( 'source' => 'checkout-facil-brasil' ) );
+				wc_get_logger()->warning( 'Checkout Fácil Brasil could not copy the fields: ' . $e->getMessage(), array( 'source' => 'facilo-checkout-facil-brasil' ) );
 			}
 		}
 	}
@@ -865,7 +865,7 @@ class CFBR_Fields_Blocks {
 		$data['rules'] = self::rules_supported();
 		$data['help']  = array(
 			'cnpj'     => CFBR_Fields::definitions()['cnpj']['help'],
-			'fallback' => __( 'Fill in the CPF or the CNPJ, depending on the person type', 'checkout-facil-brasil' ),
+			'fallback' => __( 'Fill in the CPF or the CNPJ, depending on the person type', 'facilo-checkout-facil-brasil' ),
 		);
 		wp_add_inline_script( 'cfbr-blocks', 'window.cfbrData = ' . wp_json_encode( $data ) . ';', 'before' );
 	}

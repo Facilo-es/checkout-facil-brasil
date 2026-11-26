@@ -46,7 +46,7 @@ Ele não emite nota fiscal (NF-e) nem calcula impostos: coleta e valida os dados
 
 Se o Brazilian Market on WooCommerce estiver ativo, as configurações dele são importadas e um aviso oferece desativá-lo. Nossos campos aparecem quando o plugin antigo é desligado, para nada aparecer em dobro.
 
-**Atualizações:** por enquanto, as novas versões saem como [release no GitHub](https://github.com/Facilo-es/checkout-facil-brasil/releases): baixe o novo zip e envie do mesmo jeito, e o WordPress oferece substituir a versão instalada.
+**Atualizações:** o plugin está em análise no diretório do WordPress.org como **Facilo Checkout Fácil Brasil**. Quando for aprovado, as atualizações chegam sozinhas pelo painel. Até lá, as novas versões saem como [release no GitHub](https://github.com/Facilo-es/checkout-facil-brasil/releases). A partir da 1.0.1 a pasta se chama `facilo-checkout-facil-brasil`: se você tinha a 1.0.0, instale a nova e apague a antiga, e suas configurações e pedidos continuam.
 
 ## Checkout Fácil Brasil Pro: menos digitação, mais pedidos fechados
 
@@ -109,7 +109,7 @@ No emite facturas (NF-e) ni calcula impuestos: recoge y valida los datos que ya 
 2. En WordPress, ve a **Plugins → Añadir nuevo → Subir plugin**, elige el zip y actívalo. WooCommerce debe estar activo.
 3. Abre **WooCommerce → Checkout Fácil Brasil**, sigue los tres pasos y haz un pedido de prueba.
 
-Las nuevas versiones salen como [release en GitHub](https://github.com/Facilo-es/checkout-facil-brasil/releases): descarga el zip nuevo y súbelo igual.
+El plugin está en revisión en el directorio de WordPress.org como **Facilo Checkout Fácil Brasil**; cuando se apruebe, las actualizaciones llegarán solas. Hasta entonces, las nuevas versiones salen como [release en GitHub](https://github.com/Facilo-es/checkout-facil-brasil/releases). Desde la 1.0.1 la carpeta se llama `facilo-checkout-facil-brasil`: si tenías la 1.0.0, instala la nueva y borra la antigua; tus ajustes y pedidos se mantienen.
 
 ### Checkout Fácil Brasil Pro
 

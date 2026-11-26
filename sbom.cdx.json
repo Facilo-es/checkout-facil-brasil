@@ -13,8 +13,8 @@
     },
     "component": {
       "type": "application",
-      "bom-ref": "checkout-facil-brasil@1.0.0",
-      "name": "checkout-facil-brasil",
+      "bom-ref": "facilo-checkout-facil-brasil@1.0.0",
+      "name": "facilo-checkout-facil-brasil",
       "version": "1.0.0",
       "description": "Checkout Fácil Brasil for WooCommerce (free)",
       "licenses": [
@@ -35,7 +35,7 @@
   "components": [],
   "dependencies": [
     {
-      "ref": "checkout-facil-brasil@1.0.0",
+      "ref": "facilo-checkout-facil-brasil@1.0.0",
       "dependsOn": []
     }
   ]

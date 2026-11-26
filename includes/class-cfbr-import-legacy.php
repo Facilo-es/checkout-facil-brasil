@@ -114,15 +114,15 @@ class CFBR_Import_Legacy {
 			<p><strong>
 			<?php
 			echo $imported
-				? esc_html__( 'Your Brazilian Market on WooCommerce data has been imported', 'checkout-facil-brasil' )
-				: esc_html__( 'Brazilian Market on WooCommerce is still active', 'checkout-facil-brasil' );
+				? esc_html__( 'Your Brazilian Market on WooCommerce data has been imported', 'facilo-checkout-facil-brasil' )
+				: esc_html__( 'Brazilian Market on WooCommerce is still active', 'facilo-checkout-facil-brasil' );
 			?>
 			</strong></p>
-			<p><?php esc_html_e( 'Orders, customers and settings stay the same. To avoid duplicate fields at checkout, deactivate the old plugin.', 'checkout-facil-brasil' ); ?></p>
+			<p><?php esc_html_e( 'Orders, customers and settings stay the same. To avoid duplicate fields at checkout, deactivate the old plugin.', 'facilo-checkout-facil-brasil' ); ?></p>
 			<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
 				<input type="hidden" name="action" value="<?php echo esc_attr( self::ACTION ); ?>" />
 				<?php wp_nonce_field( self::ACTION ); ?>
-				<p><button type="submit" class="button button-primary"><?php esc_html_e( 'Deactivate the old plugin', 'checkout-facil-brasil' ); ?></button></p>
+				<p><button type="submit" class="button button-primary"><?php esc_html_e( 'Deactivate the old plugin', 'facilo-checkout-facil-brasil' ); ?></button></p>
 			</form>
 		</div>
 		<?php
@@ -135,7 +135,7 @@ class CFBR_Import_Legacy {
 	 */
 	public static function deactivate() {
 		if ( ! current_user_can( 'activate_plugins' ) ) {
-			wp_die( esc_html__( 'You are not allowed to deactivate plugins.', 'checkout-facil-brasil' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to deactivate plugins.', 'facilo-checkout-facil-brasil' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( self::ACTION );
 		if ( ! function_exists( 'deactivate_plugins' ) ) {
